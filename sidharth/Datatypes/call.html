@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let name = {
+            first: "yash",
+            last: "kumar",      
+        }
+
+        let full = function(a,b) {
+                console.log(this.first + " " + this.last + a + b);
+            }
+        full.call(name, "p","hello");
+
+        let name2 = {
+            first: "anil",
+            last: "yadav",
+            date: 20,
+        }
+        full.apply(name2,["s","world"]);
+
+
+        // bind method
+        let set = full.bind(name2, "delhi", "shimla")
+        set();
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
