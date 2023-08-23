@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .container{
+           
+            width: 50%;
+            border: 1px solid black;
+            margin-left: 300px;
+            
+        }
+        input{
+           position: relative;
+           left: 200px;
+           top: 20px;
+           margin-bottom: 50px;
+        }
+
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul id="box"></ul>
+        <input type="text" id="name" class="input">
+        <input type="button" value="Add" id="btnClick" class="btn" onclick="fun()">
+        <span id="error"></span>
+    </div>
+
+    <script>
+        function fun(){
+            
+            let name = document.querySelector("#name").value;
+            if(name ==''){
+                document.getElementById('error').innerHTML = "Please enter a value";
+            }else{
+                let box = document.getElementById('box');
+                let li = document.createElement('li');
+                li.textContent = name;
+                let a = document.createElement('a');
+                a.textContent ="x";
+                a.href = "javascript:void(0)";
+                // a.className ="remove";
+                li.appendChild(a);      
+                box.appendChild(li);
+            }
+            document.getElementById('name').value = "";
+        }
+        
+        let btn = document.querySelector('ul');
+        btn.addEventListener('click',function(e){
+            let box = document.getElementById('box');
+            let lis = e.target.parentNode;
+            console.log(e.target.parentNode);
+            box.removeChild(lis);
+        });
+
+
+    </script>
+</body>
+</html>
