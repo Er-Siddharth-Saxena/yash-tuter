@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Todo list</h1>
+    <ul>
+        <li>Eat</li>
+        <li>Sleep</li>
+        <li>Code</li>
+        <li>Fruits</li>
+    </ul>
+
+    <button class="click">click</button> -->
+
+
+    <p class="copy">you can not copy this</p>
+    <div class="box" style="height: 200px; width: 250px; border: 1px solid black"></div>
+
+    <script>
+
+
+// Event basics
+
+// let set = document.querySelector('.click');
+
+// set.addEventListener('click', function(){
+//     console.log("cllickme")
+// })
+
+// let event = document.querySelectorAll('li');
+// event.forEach(element => {
+//     element.addEventListener('click', function(e){
+//         console.log(e.target)
+//         e.target.style.color ="red";
+//     })
+// });
+
+
+// remove evnt listner
+
+// let btn = document.querySelector(".click")
+// function click1(){
+//     console.log("click 1")
+// }
+// function click2(){
+//     console.log("click 2")
+// }
+
+// btn.addEventListener('click',click1)
+// btn.addEventListener('click',click2)
+
+
+// btn.removeEventListener('click', click2);
+
+// create element and append child
+
+// const ul = document.querySelector('ul');
+// let btn = document.querySelector(".click")
+
+
+// btn.addEventListener('click',function(){
+//     let li = document.createElement('li');
+//     li.textContent = "coffe";
+//     ul.prepend(li);
+// })
+
+// copy event
+
+
+let set = document.querySelector('.copy');
+set.addEventListener('copy',function(){
+  console.log("this is diffrent")
+})
+
+
+// mouse event
+
+let box = document.querySelector(".box");
+box.addEventListener('mousemove',function(e){
+console.log(e.offsetX,e.offsetY)
+})
+    </script>
+</body>
+
+
+</html>
