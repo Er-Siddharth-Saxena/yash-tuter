@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+// array methods
+// reverse
+
+// let arr = ["a", "b", "c", "d","e"];
+
+// arr.reverse();
+// console.log(arr);
+
+// let get = "programme";
+// let set = get.split("").reverse().join("");
+// console.log(set);
+
+// concat
+
+// let arr2 = [1,2,3,4];
+// let concat = arr.concat(arr2);
+// console.log(concat)
+
+
+// slice method
+// Array.slice(startIndex, lastIndex(excluded))
+// let arr = [3,5,7,9,2];
+// let set = arr.slice(1,4);
+// console.log(set);
+
+
+// splice method
+// Array.splice(index,deletevalue,valueToBeAdded)
+// let num = [3,5,7,9,2]
+// let news = num.splice(1,2,1,8);
+// console.log(news);
+// console.log(num);
+
+// at method
+// let nums = [23,54,77,99];
+
+// console.log(nums[0]);
+// console.log(nums.at(0));
+
+// getting last element of array
+
+// console.log(nums[nums.length - 1]);
+// console.log(nums.slice(-2));
+// console.log(nums.at(-2))
+
+
+// map method
+
+// create new array from Original array by applying Transformation function
+
+// let salaries= [200,300,400,500,600]
+// let set = salaries.map(e=>{
+//     let get = e/2;
+//     return e + get;
+// })
+
+// console.log(set);
+
+// let arr = [{id:1, name:'yash'},
+// {id:2, name:'sidharth'},
+// {id:3, name:'Anuj'}]
+
+// let set = arr.map(name => name.id);
+// console.log(set);
+
+
+// let arr = [1,2,3,4,5,6];
+// let even = arr.filter(x => x % 2 == 0);
+// console.log(even);
+
+// reduce method
+
+// let num = [1,5,8,3,4];
+// let sum = num.reduce(function(a,b){
+//     return a + b;
+// },0)
+// console.log(sum);
+
+// Array.reduce(function(total,cureentvalue),initialValue)
+
+// find method
+
+// it returns the first element we are looking for
+// let arr = [{id:1,name:'yash'},{id:2,name:'anil'},{id:1,name:'harsh'}]
+
+// let set = arr.find(a =>{
+//     return a.id === 1
+// })
+// console.log(set);
+
+
+// findIndex method
+// it return "index" of that arrray element who first pass the test otherwise -1
+
+// let ages = [11,18,19,21,17]
+// let result = ages.findIndex(a=>{
+//     return a > 20
+// })
+// console.log(result)
+
+
+// some and every method
+
+// some method return "true" if any array element pass the test
+// every method return true if all array element pass the test
+
+// let ages = [23,18,19,21,17]
+
+// let res = ages.every(a =>{
+//     return a > 10
+// })
+
+// console.log(res);
+
+// flat method
+
+// let arr = [1,2,3,[4,5,[6,8,9]]];
+// let res = arr.flat(); //by default 1  value
+// console.log(res);
+
+// flatmap 
+
+let cart = [{
+    name:"Mobile Phone",
+    qty: 2,
+    price: 500,
+},
+{
+    name:"Tablet",
+    qty: 1,
+    price: 1000,
+}]
+let newCart = cart.flatMap(a =>{
+    if(a.name === "Mobile Phone"){
+        return[a,{
+            name:"Cover",
+            qty:1,
+            price:0
+        }]
+    }else{
+        return [a]
+    }
+})
+
+console.log(newCart)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
