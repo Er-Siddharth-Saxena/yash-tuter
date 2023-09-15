@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <!-- Destructuring the arrays -->
+    <script>  
+     let hotel = {
+        name: "hotel",
+        location: "street of Delhi",
+        cateogries: ["chineese", "Italian", "Spanish"]
+     }
+    //  without
+    let items = [2,3,4,5];
+    // let x = items[0];
+    // let y = items[1];
+    // let z = items[2];
+    // let p = items[3]
+    // console.log(x,y,z,p)
+    // with destructring
+    // let [x,y,z,p] = items;
+    // console.log(x,z,y,p);
+    // example
+    let [first, ,second] = hotel.cateogries;
+    console.log(first,second);
+    // let temp = first;
+    // first = second;
+    // second = temp;
+    // console.log(first,second);
+// swap with destructuring
+    // [second,first] = [first,second]
+    // console.log(first,second)
+// Destructuring of nested arrays
+let nums = [2,3,[6,9]];
+let [a, ,[b,c]] = nums;
+console.log(a,b,c);
+    </script>
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h1>Todo list</h1>
+    <h1>Todo list</h1>
     <ul>
         <li>Eat</li>
         <li>Sleep</li>
@@ -14,11 +14,11 @@
         <li>Fruits</li>
     </ul>
 
-    <button class="click">click</button> -->
-
+    <button class="click">click</button>
+<!-- 
 
     <p class="copy">you can not copy this</p>
-    <div class="box" style="height: 200px; width: 250px; border: 1px solid black"></div>
+    <div class="box" style="height: 200px; width: 250px; border: 1px solid black"></div> -->
 
     <script>
 
@@ -58,31 +58,37 @@
 
 // create element and append child
 
-// const ul = document.querySelector('ul');
-// let btn = document.querySelector(".click")
+const ul = document.querySelector('ul');
+
+ul.addEventListener("click",(e)=>{
+    if(e.target.nodeName == "LI"){
+        e.target.remove();
+    }
+})
+let btn = document.querySelector(".click")
 
 
-// btn.addEventListener('click',function(){
-//     let li = document.createElement('li');
-//     li.textContent = "coffe";
-//     ul.prepend(li);
-// })
+btn.addEventListener('click',function(){
+    let li = document.createElement('li');
+    li.textContent = "coffe";
+    ul.prepend(li);
+})
 
 // copy event
 
 
-let set = document.querySelector('.copy');
-set.addEventListener('copy',function(){
-  console.log("this is diffrent")
-})
+// let set = document.querySelector('.copy');
+// set.addEventListener('copy',function(){
+//   console.log("this is diffrent")
+// })
 
 
 // mouse event
 
-let box = document.querySelector(".box");
-box.addEventListener('mousemove',function(e){
-console.log(e.offsetX,e.offsetY)
-})
+// let box = document.querySelector(".box");
+// box.addEventListener('mousemove',function(e){
+// console.log(e.offsetX,e.offsetY)
+// })
     </script>
 </body>
 

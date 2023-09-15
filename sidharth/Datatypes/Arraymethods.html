@@ -131,32 +131,52 @@
 
 // flatmap 
 
-let cart = [{
-    name:"Mobile Phone",
-    qty: 2,
-    price: 500,
-},
-{
-    name:"Tablet",
-    qty: 1,
-    price: 1000,
-}]
-let newCart = cart.flatMap(a =>{
-    if(a.name === "Mobile Phone"){
-        return[a,{
-            name:"Cover",
-            qty:1,
-            price:0
-        }]
-    }else{
-        return [a]
-    }
-})
+// let cart = [{
+//     name:"Mobile Phone",
+//     qty: 2,
+//     price: 500,
+// },
+// {
+//     name:"Tablet",
+//     qty: 1,
+//     price: 1000,
+// }]
+// let newCart = cart.flatMap(a =>{
+//     if(a.name === "Mobile Phone"){
+//         return[a,{
+//             name:"Cover",
+//             qty:1,
+//             price:0
+//         }]
+//     }else{
+//         return [a]
+//     }
+// })
 
-console.log(newCart)
+// console.log(newCart)
 
+// sort method
+// By default sort method is used to sort strings
 
+// let arr = ["a","d","e","f","b"];
+// console.log(arr.sort());
 
+// let nums = [2,5,7,-1,-22,-43]
+
+// console.log(nums.sort());
+
+// a<b a-b<0  (keep order same)
+// a>b => a-b>0 B,A(switch the order)
+
+// nums.sort((a,b)=>{
+//     return b-a;
+// })
+// console.log(nums);
+
+// let num = [1,2,3,4,5,6]
+// let result = num.slice(0,4);
+// let result2 = result.splice(1,1,7);
+// console.log(result);
 
 
 

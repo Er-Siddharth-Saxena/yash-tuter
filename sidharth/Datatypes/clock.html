@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            font: 200;
+            color: white;
+
+        }
+        button{
+            height: 35px;
+            width: 30px;
+            margin: auto;
+            position: relative;
+            left: 500px;
+            color: white;
+            border: 1px;
+            background-color: black;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <button class="hour"></button>
+        <button class="minutes"></button>
+        <button class="seconds"></button>
+    </div>
+
+    <script>
+        let hourhand = document.querySelector(".hour");
+        let minuteshand = document.querySelector(".minutes");
+        let secondshand = document.querySelector(".seconds");
+
+        let ticking = function(){
+            let currDate = new Date();
+            let getHour = currDate.getHours();
+            let getMinutes = currDate.getMinutes();
+            let getSeconds = currDate.getSeconds();
+
+            // console.log(getHour,getMinutes,getSeconds);
+            
+            hourhand.textContent = getHour;
+            minuteshand.textContent =getMinutes;
+            secondshand.textContent = getSeconds;
+
+        }
+
+    console.log(setInterval(ticking))
+    
+    </script>
+</body>
+</html>

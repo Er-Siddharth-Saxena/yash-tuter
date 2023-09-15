@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightcoral;
+            font-size: 200px;
+        }
+        input{
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="sign">
+        <input type="email" name="userEmail" id="email">
+        <input type="password" name="userPassword" id="pass">
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        let form = document.querySelector(".sign");
+        // let email = document.querySelector("#email");
+        // let password = document.querySelector("#pass");
+
+        form.addEventListener('submit',(e)=>{
+              e.preventDefault();
+            console.log(form.userEmail.value,form.userPassword.value);
+        })
+    </script>
+</body>
+</html>

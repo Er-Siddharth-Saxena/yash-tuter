@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+// Local storage
+// in previous todo list when we refresh the browser we lose our current state data
+// store and retrive data from local storage
+// is an api provided by browser to store data inside browser
+
+// console.log(window.localStorage)
+
+// set item
+
+// set the item in local storage
+// localStorage.setItem("hobbies","circket");
+// localStorage.setItem("music","pop")
+// console.log(localStorage);
+
+
+// get item from l.s
+
+// console.log(localStorage.getItem("music"));
+
+// update
+// localStorage.setItem("music","classic");
+// console.log(localStorage);
+
+// Remove item
+// localStorage.removeItem("music");
+// localStorage.removeItem("pasiion");
+// console.log(localStorage);
+
+// complex data structure
+
+let obj = [
+    {name:"yash",DOB: 1999},
+    {name:"rahul",DOB: 2000},
+]
+
+console.log(typeof obj);
+
+let get = JSON.stringify(obj);
+console.log(get);
+
+localStorage.setItem("obj",get);
+console.log(localStorage);
+
+
+// get stored item again in object format
+
+let bet = localStorage.getItem("obj");
+
+let objectform = JSON.parse(bet);
+console.log(objectform);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

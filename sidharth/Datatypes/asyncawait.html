@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // async and await
+        // Error handling using try catch method
+        
+    // let goTodos= async()=>{
+      
+    //     try{
+    //         let res = await fetch("data.json");
+    //         let data = await res.json();
+
+    //         let res2= await fetch("data2.json")
+    //         let data2 = await res2.json();
+
+    // console.log(data,data2);
+    //     }
+    //     catch(err){
+    //         console.log(err.message);
+    //     }
+    // }
+ 
+    // goTodos();
+
+    async function test(){
+        console.log("2 : message");
+        const res = await fetch("data.json");
+        console.log("4 : message");
+        const students = await res.json();
+        console.log("6: message")
+        return students;
+    }
+        console.log("3 : message");
+        let a = test();
+        console.log("5 : message");
+        console.log(a);
+        
+
+
+//    function get (){
+//     console.log("h")
+//     return "hello";
+//    }
+//    let b = get();
+//    console.log(b);
+
+    </script>
+</body>
+</html>

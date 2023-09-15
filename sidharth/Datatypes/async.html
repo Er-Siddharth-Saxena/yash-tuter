@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // console.log(1);
+      // console.log(2);
+      // setTimeout(function(){
+      //     console.log(3)
+      // },2000)
+      // console.log(4)
+
+      // Making HTTP request
+
+      let todos = (resource, callback) => {
+        let request = new XMLHttpRequest();
+        // console.log(request);
+        request.addEventListener("readystatechange", () => {
+          // console.log(request, request.readyState)
+          if (request.readyState == 4 && request.status == 200) {
+            // console.log(request,request.responseText)
+            let data = JSON.parse(request.responseText);
+            callback(undefined, data);
+          } else if (request.readyState == 4) {
+            // console.log("Data could not found")
+            callback("Data not fetch", undefined);
+          }
+        });
+        // set up the request
+        // request.open("Get","https://jsonplaceholder.typicode.com/posts");
+        request.open("Get", resource);
+
+        // sending the request
+        request.send();
+      };
+      // chain of todos function(callback)
+      todos("datas.json", (err, data) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(data);
+        }
+        todos("data2.json", (err, data) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(data);
+          }
+          todos("data3.json", (err, data) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log(data);
+            }
+          });
+        });
+      });
+
+      // value state description
+      // 0. UNSENT- client has been created.open() not called yet
+      // 1. OPENED- open() has been called
+      // 2. Headers-Recivd- send() has benn called
+      // 3. Loading: responsetext holds partial data
+      // 4. Done: the operation is complete
+
+      // HTTP response
+      // Informational responses (100-199)
+      // Sucsessful responses (200-299)
+      // Redirection Messages (300-399)
+      // client error responses (400-499)
+      // server error responses (500-599)
+    </script>
+  </body>
+</html>

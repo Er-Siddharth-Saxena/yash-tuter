@@ -9,49 +9,66 @@
     
 
     <script>
+        "Use strict"
+        // let name = {
+        //     first: "yash",
+        //     last: "kumar",      
+        // }
 
-        let name = {
-            first: "yash",
-            last: "kumar",      
-        }
+        // let full = function(a,b) {
+        //         console.log(this.first + " " + this.last + a + b);
+        //     }
+        // full.call(name, "p","hello");
 
-        let full = function(a,b) {
-                console.log(this.first + " " + this.last + a + b);
+        // let name2 = {
+        //     first: "anil",
+        //     last: "yadav",
+        //     date: 20,
+        // }
+        // full.apply(name2,["s","world"]);
+
+
+        // // bind method
+        // let set = full.bind(name2, "delhi", "shimla")
+        // set();
+
+
+         let set = {
+            airline:"fly india",
+            iatacode:"FI",
+            bookings:[],
+            book: function(a,b){
+                console.log(`booked flight on ${this.airline} with iatacode ${this.iatacode}`);
+                this.bookings.push({a:`${this.airline}`, b:b})
             }
-        full.call(name, "p","hello");
+         }
+         set.book(553,"yash");
+         set.book(664,"sidharth")
 
-        let name2 = {
-            first: "anil",
-            last: "yadav",
-            date: 20,
+         console.log(set);
+        //  new ailrine launched
+        let get = {
+            airline:"emirates",
+            iatacode:"EA",
+            bookings:[]
         }
-        full.apply(name2,["s","world"]);
 
+        // let books = set.book;
+        // books(224,"anil");
 
-        // bind method
-        let set = full.bind(name2, "delhi", "shimla")
-        set();
+    //   set.book.call(get, 223, "rahul")
+    //   console.log(get);
+     
+
+    // set.book.apply(get, [223,"rahul"]);
+    //   console.log(get);
+
+    let dot = set.book.bind(get, 223, "mac")
+    dot();
+    console.log(get);
+
 
        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

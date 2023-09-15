@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 21/8/23 -->
+<div class="content">
+    <a href="https://google.com">Google</a>
+    <h1>Welcome home</h1>
+    <p>Welcome to club</p>
+    <h2>Hello world</h2>
+</div>
+  
+
+    <script>
+// innerText
+//  let heading =  document.querySelector('p');
+//  heading.innerText += "<p>i am new here</p>";
+
+
+//  innerHtml
+// heading.innerHTML += "<h1> i am new here </h1>"
+
+
+// getting and setting attribute of element
+
+// let set = document.querySelector('a');
+// console.log(set.getAttribute('href'));
+
+
+// set the attribute
+// set.setAttribute('href',"https://www.facebook.com/");
+// set.innerText = "Facebook"
+
+// Adding the style
+// function set(){
+//     let heading = document.querySelector('h1');
+// heading.style.color="teal";
+// heading.style.display = "none";
+// }
+
+// Add, Replace, Remove of class of an element
+    // let heading = document.querySelector('h1');
+
+    // AdD
+    // heading.classList.add('newclass');
+
+    // Remove
+    // heading.classList.remove('newclass');
+
+    // replace the class
+    // heading.classList.replace("main","newclass");
+
+
+    // parent , children and siblings elements
+
+//   let parent = document.querySelector('.content')
+//   console.log(parent);
+
+// All children of parent
+// console.log(parent.children)
+
+// we can not run forEach method on htmlcollection so first conver it into array
+
+// console.log(Array.from(parent.children));
+
+// Array.from(parent.children).forEach(function(elm){
+//   elm.classList.add("main");
+//   elm.style.color = "red";
+// });
+
+let Child = document.querySelector('h1');
+console.log(Child.parentElement);
+
+console.log(Child.nextElementSibling);
+
+console.log(Child.previousElementSibling);
+
+
+
+    </script>
+</body>
+</html>

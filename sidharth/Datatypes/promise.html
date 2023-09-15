@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // let data = Promise.allSettled([
+    //     let data = Promise.race([
+
+    //      new Promise((resolve,reject)=>{
+    //        setTimeout(()=>{
+    //           resolve("2 second");
+    //        },2000)
+    //     }),
+    //     new Promise((resolve,reject)=>{
+    //        setTimeout(()=>{
+    //           reject("1 second");
+    //        },1000)
+    //     }),
+    //     new Promise((resolve,reject)=>{
+    //        setTimeout(()=>{
+    //            resolve("4 second");
+    //        },4000)
+    //     })
+    // ]);
+
+    //     data.then((e)=>{
+    //      console.log("then block",e);
+    //     }).catch((err)=>{
+    //        console.log("catch block", err)
+    //     })
+
+
+        let data = fetch("data.json")
+        data.then((e)=>{
+             return e.json();
+        }).then((res)=>{
+          console.log(res);
+        })
+       
+    </script>
+</body>
+</html>
